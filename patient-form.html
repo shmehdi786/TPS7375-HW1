@@ -90,10 +90,11 @@
             <option value="WA">WA</option>
             <option value="DC">DC</option>
             <option value="PR">PR</option>
-            <!-- Not sure how to add states without listing all 50, just gonna stop here -->
+            <!-- Not sure how to add states without listing all of them, so stopping here -->
           </select>
         </td>
         <td><label for="zip">Zip:</label></td>
+        <!-- had to look up how to use regular expressions to get this to work properly -->
         <td><input type="text" id="zip" name="zip" maxlength="10" pattern="^\d{5}(-\d{4})?$" placeholder="5 or 9 digits" required></td>
       </tr>
 
@@ -103,39 +104,33 @@
         <td colspan="5"><input type="email" id="email" name="email" required></td>
       </tr>
 
-      <!-- Medical History -->
+      <!-- Health Scale (1-10) -->
       <tr>
-        <td><label for="symptoms">Describe your symptoms:</label></td>
-        <td colspan="5"><textarea id="symptoms" name="symptoms" rows="3" cols="50" placeholder="Enter any current symptoms or concerns here."></textarea></td>
-      </tr>
-
-      <!-- Checkboxes -->
-      <tr>
-        <td colspan="6">
-          <p>Check all that apply (Medical History):</p>
-          <input type="checkbox" id="chickenPox" name="history" value="ChickenPox">
-          <label for="chickenPox">Chicken Pox</label>
-          <input type="checkbox" id="measles" name="history" value="Measles">
-          <label for="measles">Measles</label>
-          <input type="checkbox" id="covid" name="history" value="Covid-19">
-          <label for="covid">Covid-19</label>
-          <input type="checkbox" id="smallPox" name="history" value="SmallPox">
-          <label for="smallPox">Small Pox</label>
-          <input type="checkbox" id="tetanus" name="history" value="Tetanus">
-          <label for="tetanus">Tetanus</label>
+        <td><label for="healthScale">Health Scale (1-10):</label></td>
+        <td colspan="5">
+          <input type="range" id="healthScale" name="healthScale" min="1" max="10" value="5">
         </td>
       </tr>
 
-      <!-- Gender Selection -->
+      <!-- Vaccination Status -->
       <tr>
         <td colspan="6">
-          <p>Gender:</p>
-          <input type="radio" id="genderMale" name="gender" value="Male">
-          <label for="genderMale">Male</label>
-          <input type="radio" id="genderFemale" name="gender" value="Female">
-          <label for="genderFemale">Female</label>
-          <input type="radio" id="genderOther" name="gender" value="Other">
-          <label for="genderOther">Other</label>
+          <p>Have you been vaccinated?</p>
+          <input type="radio" id="vaxYes" name="vaccinated" value="Yes">
+          <label for="vaxYes">Yes</label>
+          <input type="radio" id="vaxNo" name="vaccinated" value="No">
+          <label for="vaxNo">No</label>
+        </td>
+      </tr>
+
+      <!-- Insurance Status -->
+      <tr>
+        <td colspan="6">
+          <p>Do you have insurance?</p>
+          <input type="radio" id="insYes" name="insurance" value="Yes">
+          <label for="insYes">Yes</label>
+          <input type="radio" id="insNo" name="insurance" value="No">
+          <label for="insNo">No</label>
         </td>
       </tr>
 
@@ -154,11 +149,27 @@
 
 <!-- FOOTER SECTION -->
 <div class="footer-section">
-  <p>We'R'Docs Medical | <button onclick="alert('Contact us at 1-800-555-1234 or email contact@meddocs.com');">Contact Us</button> | 
+  <p>Magical Medical Center | <button onclick="alert('Contact us at 1-800-555-1234 or email contact@magicalmedicalcenter.com');">Contact Us</button> | 
     <a href="https://facebook.com" target="_blank">Facebook</a> 
     <a href="https://twitter.com" target="_blank">Twitter</a>
   </p>
   <p>PO BOX 18881, Sugar Land, TX 77496</p>
 </div>
+
+<!-- Commented-out User ID & Password Fields -->
+<!--
+<tr>
+  <td><label for="userID">Desired User ID:</label></td>
+  <td><input type="text" id="userID" name="userID" maxlength="20"></td>
+</tr>
+
+<tr>
+  <td><label for="pwd">Password:</label></td>
+  <td><input type="password" id="pwd" name="pwd" required></td>
+  <td><label for="pwd2">Re-enter Password:</label></td>
+  <td><input type="password" id="pwd2" name="pwd2" required></td>
+</tr>
+-->
+
 </body>
 </html>
