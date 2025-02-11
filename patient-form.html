@@ -104,6 +104,19 @@
         <td colspan="5"><input type="email" id="email" name="email" required></td>
       </tr>
 
+       <!-- Gender Selection -->
+       <tr>
+        <td colspan="6">
+          <p>Gender:</p>
+          <input type="radio" id="genderMale" name="gender" value="Male">
+          <label for="genderMale">Male</label>
+          <input type="radio" id="genderFemale" name="gender" value="Female">
+          <label for="genderFemale">Female</label>
+          <input type="radio" id="genderOther" name="gender" value="Other">
+          <label for="genderOther">Other</label>
+        </td>
+      </tr>
+
       <!-- Health Scale (1-10) -->
       <tr>
         <td><label for="healthScale">Health Scale (1-10):</label></td>
@@ -134,6 +147,23 @@
         </td>
       </tr>
 
+      <!-- Checkboxes -->
+      <tr>
+        <td colspan="6">
+          <p>Check all that apply (Medical History):</p>
+          <input type="checkbox" id="chickenPox" name="history" value="ChickenPox">
+          <label for="chickenPox">Chicken Pox</label>
+          <input type="checkbox" id="measles" name="history" value="Measles">
+          <label for="measles">Measles</label>
+          <input type="checkbox" id="covid" name="history" value="Covid-19">
+          <label for="covid">Covid-19</label>
+          <input type="checkbox" id="smallPox" name="history" value="SmallPox">
+          <label for="smallPox">Small Pox</label>
+          <input type="checkbox" id="tetanus" name="history" value="Tetanus">
+          <label for="tetanus">Tetanus</label>
+        </td>
+      </tr>
+
       <!-- Form Buttons -->
       <tr>
         <td colspan="6" style="text-align: center;">
@@ -155,21 +185,6 @@
   </p>
   <p>PO BOX 18881, Sugar Land, TX 77496</p>
 </div>
-
-<!-- Commented-out User ID & Password Fields -->
-<!--
-<tr>
-  <td><label for="userID">Desired User ID:</label></td>
-  <td><input type="text" id="userID" name="userID" maxlength="20"></td>
-</tr>
-
-<tr>
-  <td><label for="pwd">Password:</label></td>
-  <td><input type="password" id="pwd" name="pwd" required></td>
-  <td><label for="pwd2">Re-enter Password:</label></td>
-  <td><input type="password" id="pwd2" name="pwd2" required></td>
-</tr>
--->
 
 </body>
 </html>
